@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 text-center">
+<button (click)="getdata();"  class="btn btn-primary center-block"> try me </button></div>
+<ng-template [ngIf]="table">
+<table class="table">
+<tr>
+<td>Num</td>
+<td>Avatar</td>
+<td>First & Last Name</td>
+<td>E-mail</td>
+</tr>
+
+<ng-container *ngFor="let utilisateur of table.data ; let i = index">
+<tr>
+<td>{{i}}</td>
+<td><img src="{{utilisateur.avatar}}" height="100" width="100"></td>
+<td>{{utilisateur.first_name}} {{utilisateur.last_name}}</td>
+
+<td>{{utilisateur.email}}</td>
+
+</tr>
+
+
+  </ng-container>
+</table>
+</ng-template>
+</div>
+</div>
